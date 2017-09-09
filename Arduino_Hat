@@ -110,7 +110,7 @@ void loop() {
   delay(1);        // delay in between reads for stability
   
   sigVal = analogRead(A0);
-  aScale = fscale(0,1023,3,2,sigVal,0);
+  aScale = fscale(0,1023,3,1.5,sigVal,0);
   vol = average * aScale;
   
   interval = fscale(0,2000,0,1000,vol,0.5); //pulses faster  a lot faster...trying to see if this is easier to feel
